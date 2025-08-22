@@ -1,0 +1,7 @@
+Flask
+Flask-SQLAlchemy
+flask-cors
+google-generativeai
+python-docx
+PyMuPDF
+Werkzeug

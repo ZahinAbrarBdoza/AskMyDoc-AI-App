@@ -1,0 +1,7 @@
+Task: 
+Build an AI-Powered Q&A Web Application Description: Create a full-stack web application where users can upload a text document (e.g., .txt, .pdf, .docx) and then ask natural language questions about the content. The application should use an AI model (local or API-based) to generate answers based on the uploaded file. 
+
+Requirements: Frontend: Simple UI for: Uploading a document. Asking a question in a text input box. Displaying AI-generated answers. Basic styling (does not need to be fancy). 
+
+Backend: Accept document uploads and process them into a searchable format. Handle user queries and pass them to an AI model. Return the AI-generated response to the frontend. use Flask AI Integration: Use AI/ML model OpenAI The model should generate answers only from the uploaded document’s content. Bonus Add authentication (users can log in and manage uploaded documents). Store uploaded documents and past Q&A history in a database. Support multiple file formats. 
+Evaluation Criteria: Completeness: Upload, Q&A, and AI response functionality. Scalability & Architecture: Clean backend structure with proper separation of concerns. AI Usage: Effective integration and usage of AI (e.g., embeddings, retrieval, prompt design). UI/UX: Intuitive and functional interface.

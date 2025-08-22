@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+<div class="container mt-4">
+    <h1 class="mb-2">Welcome, {{ username }} 👋</h1>
+    <p class="lead">
+        Ready to explore your documents with AI? Upload a <strong>.txt</strong>, <strong>.pdf</strong>, or <strong>.docx</strong> file and start asking questions. Your Q&A history will be saved automatically!
+    </p>
+</div>
+
+
+    <!-- Upload Form -->
+    <div class="card shadow p-4 mb-4">
+        <h4 class="mb-3">Upload a New Document</h4>
+        <form action="{{ url_for('upload') }}" method="POST" enctype="multipart/form-data" class="mb-3">
+            <div class="mb-3">
+                <input class="form-control" type="file" name="document" required>
+            </div>
+            <button class="btn btn-primary" id="uploadButton">Upload</button>
+        </form>
+    </div>
+
+    {% if documents %}
+    <div class="card shadow p-4" id="documentsList">
+        <h4>Your Documents</h4>
+        <ul class="list-group">
+            {% for doc in documents %}
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                {{ doc.filename }}
+                <a href="{{ url_for('document_view', filename=doc.filename) }}" class="btn btn-sm btn-outline-primary">Open</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% else %}
+    <p>No documents uploaded yet.</p>
+    {% endif %}
+
+{% endblock %}

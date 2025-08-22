@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card shadow p-4">
+    <h2 class="mb-3">Welcome, {{ session["username"] }} 👋</h2>
+    <p>Upload a document and start asking questions with AI.</p>
+
+    <form action="{{ url_for('upload') }}" method="POST" enctype="multipart/form-data" class="mb-4">
+        <div class="mb-3">
+            <input class="form-control" type="file" name="document" required>
+        </div>
+        <button class="btn btn-primary">Upload</button>
+    </form>
+
+    {% if documents %}
+    <h4>Your Documents</h4>
+    <ul class="list-group">
+        {% for doc in documents %}
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            {{ doc.filename }}
+            <a href="{{ url_for('document_view', filename=doc.filename) }}" class="btn btn-sm btn-outline-primary">Open</a>
+        </li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+</div>
+{% endblock %}

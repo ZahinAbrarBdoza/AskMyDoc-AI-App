@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container mt-4">
+    <div class="card shadow p-4">
+        <h3>Document: {{ filename }}</h3>
+
+        <!-- Question Form -->
+        <form action="{{ url_for('ask') }}" method="POST" class="mt-3">
+            <div class="mb-3">
+                <label class="form-label">Ask a Question</label>
+                <input class="form-control" type="text" name="question" placeholder="Type your question here..." required>
+            </div>
+            <button class="btn btn-primary">Ask AI</button>
+            <a href="{{ url_for('dashboard') }}" class="btn btn-secondary ms-2">Back to Dashboard</a>
+        </form>
+
+        <!-- AI Answer -->
+        {% if answer %}
+        <div class="mt-4 p-3 border rounded bg-light">
+            <h5>Answer:</h5>
+            <p>{{ answer }}</p>
+        </div>
+        {% endif %}
+
+        <!-- Previous Q&A -->
+        {% if qas %}
+        <div class="mt-4">
+            <h5>Previous Q&A</h5>
+            <ul class="list-group">
+                {% for qa in qas|sort(attribute='timestamp', reverse=True) %}
+                <li class="list-group-item">
+                    <strong>Q:</strong> {{ qa.question }}<br>
+                    <strong>A:</strong> {{ qa.answer }}
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+/* Reset + Global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+/* suttle animation */
+.list-group-item {
+  transition: background 0.3s, transform 0.15s;
+}
+
+.list-group-item:hover {
+  background: #e8e8ff;
+  transform: translateX(2px);
+}
+
+
+
+/* upload botton  */
+#uploadButton {
+  background: #5350c4;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  box-shadow: 0 4px 12px rgba(83, 80, 196, 0.3);
+}
+
+#uploadButton:hover {
+  background: #4140a0;
+  transform: translateY(-2px);
+}
+
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(#eeeeff, #c8c7ff);
+}
+
+/* Navbar */
+.navbar {
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+.nav-link {
+  transition: color 0.2s ease-in-out;
+}
+
+.nav-link:hover {
+  color: #0d6efd !important;
+}
+
+/* Container */
+.container {
+  max-width: 900px;
+  /* padding-bottom: 50px; */
+}
+
+
+
+/* Flash messages (alerts) */
+.alert {
+  border-radius: 10px;
+  font-size: 0.95rem;
+}
+
+/* Cards (used in dashboard, login, register, document) */
+.card {
+  border-radius: 15px;
+  border: none;
+  background: #fff;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.card h2, 
+.card h3, 
+.card h4 {
+  font-weight: 600;
+  color: #333;
+}
+
+/* Forms */
+.form-control {
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  padding: 10px 12px;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+.form-control:focus {
+  border-color: #5350c4;
+  box-shadow: 0 0 0 0.2rem rgba(83, 80, 196, 0.25);
+}
+
+/* Buttons */
+.btn {
+  border-radius: 10px;
+  padding: 0.5rem 1.25rem;
+  transition: transform 0.15s ease, background 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+/* Links under login/register forms */
+.card p a {
+  color: #5350c4;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.card p a:hover {
+  text-decoration: underline;
+}
+
+/* Lists (documents & QAs) */
+.list-group-item {
+  border-radius: 8px !important;
+  margin-bottom: 6px;
+  border: 1px solid #ddd;
+  transition: background 0.2s;
+}
+
+.list-group-item:hover {
+  background: #f2f2ff;
+}
+
+/* Answer box in document.html */
+.border.rounded.bg-light {
+  background-color: #f8f9fa !important;
+  border: 1px solid #ddd;
+  border-radius: 10px !important;
+  padding: 15px;
+}

@@ -1,0 +1,8 @@
+Artificial Intelligence (AI) is the simulation of human intelligence processes by machines, especially computer systems. 
+These processes include learning, reasoning, and self-correction. 
+
+Machine Learning (ML) is a subset of AI that focuses on building systems that can learn from data and improve their performance over time without being explicitly programmed. 
+
+Natural Language Processing (NLP) is a branch of AI that helps computers understand, interpret, and generate human language. 
+
+Example: Chatbots use NLP to interact with users in a natural way.

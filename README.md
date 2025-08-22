@@ -21,17 +21,17 @@ cd document-qa-app
 ```
 
 2. **Set up a virtual environment**
-    python -m venv venv
+    `python -m venv venv`
 
 3. **Activate the virtual environment** 
     On Windows use: `venv\Scripts\activate`
 
 4. **Install dependencies**
-    pip install -r requirements.txt
+    `pip install -r requirements.txt`
 
 5. **Run the Flask application**
     From the terminal, run:
-    python backend/app.py
+    `python backend/app.py`
 
 ## Testing
 
